@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tech Titans">
+    <meta name="description" content="A multiplayer tic-tac-toe game">
+    <title>Tic-Tac-Toe-Toe by Tech Titans</title>
+    <!--Tic-Tac-Toe icon-->
+    <link rel="icon" href="./img/tic-tac-toe.png" type="image/x-icon">
+</head>
+
+<body>
+        <!--choose a player menu -->
+    <div div class="selection box">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="Question"> Choose the Icon you shall use</div>
+            <div class="option">
+        <button class="playerX">PLAYER X</button>
+        <button class="playerO">PLAYER O</button> </div>
+    </div> 
+    
+    <!--GAMEBOARD-->
+    <div class="gameboard">
+    <div class="details">
+        <div class="players">
+            <span class="turn for X">X's Turn</span>
+            <span class="turn for O">O's Turn</span>
+            <div class="slider"></div>
+        </div>
+    </div>
+    </div>
+    
+    <!--PLAYBOARD/AREA-->
+    <div class="playboard">
+        <section>
+            <!--a section represents a row-->
+            <!--a span represents a single box-->
+            <span class="box1"></span>
+            <span class="box2"></span>
+            <span class="box3"></span>
+        </section>
+        <section>
+            <!--a section represents a row-->
+            <!--a span represents a single box-->
+            <span class="box4"></span>
+            <span class="box5"></span>
+            <span class="box6"></span>
+        </section>
+        <section>
+            <!--a section represents a row-->
+            <!--a span represents a single box-->
+            <span class="box7"></span>
+            <span class="box8"></span>
+            <span class="box9"></span>
+        </section>
+    </div>
+
+    <!--GAMERESULT(shows which player has won)-->
+    <div class="resultbox">
+        <div class="result text"></div>
+        <div class="button">
+            <button>REPLAY</button>
+            <button onclick="Window.location.href='Tic-tac-Toe.html'">GO HOME</button>
+        </div>
+
+    <footer>&copy;By:The Tech Titans</footer>
+    
+</body>
+</html> 
