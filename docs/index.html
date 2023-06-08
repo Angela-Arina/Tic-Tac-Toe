@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Tech Titans">
-    <meta name="description" content="A multiplayer tic-tac-toe game">
-    <title>Tic-Tac-Toe-Toe by Tech Titans</title>
-    <!--Tic-Tac-Toe icon-->
-    <link rel="icon" href="./img/tic-tac-toe.png" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tech Titans">
+        <meta name="description" content="A multiplayer tic-tac-toe game">
+        <title>Tic-Tac-Toe-Toe by Tech Titans</title>
+        <!--Tic-Tac-Toe icon-->
+        <link rel="icon" href="./img/tic-tac-toe.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body class="min-h-screen scroll-auto flex justify-center items-center bg-green-400">
+            <!-- choose a player menu -->
+        <div div class="selection box bg-white p-4 text-lg font-semibold rounded-2xl">
+            <h1 class="font-bold text-center bg-black text-white rounded-2xl">Tic-Tac-Toe</h1>
+            <h2 class="font-bold"> Choose the Icon you shall use</h2>
+            
+            <div class="flex flex-col bg-green-600 gap-2">
+                <div class="flex justify-around">
+                    <button class="playerX bg-green-300 mt-2 rounded-lg cursor-pointer border-white border-2" id="player-x-button">PLAYER X</button>
+                    <button class="playerO  bg-blue-300 mt-2 rounded-lg cursor-pointer border-white border-2" id="player-y-button">PLAYER O</button>
+                </div>
+                
+                <button class="text-center  bg-green-300 mt-2 rounded-lg cursor-pointer border-white border-2 w-[50%] mx-auto mb-3" id="play-game-button">PLAY GAME</button>
+            </div>
+        </div> 
+    </body>
 
 <!-- <body>
-        choose a player menu
-    <div div class="selection box">
-        <h1>Tic-Tac-Toe</h1>
-        <div class="Question"> Choose the Icon you shall use</div>
-            <div class="option">
-        <button class="playerX">PLAYER X</button>
-        <button class="playerO">PLAYER O</button> </div>
-    </div> 
     
     GAMEBOARD
     <div class="gameboard">
@@ -69,4 +79,3 @@
     <footer>&copy;By:The Tech Titans</footer>
     
 </body> -->
-</html> 
