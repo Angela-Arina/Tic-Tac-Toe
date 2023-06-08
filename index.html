@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tech Titans">
+    <meta name="description" content="A multiplayer tic-tac-toe game">
+    <title>Tic-Tac-Toe-Toe by Tech Titans</title>
+    <!--Tic-Tac-Toe icon-->
+    <link rel="icon" href="./img/tic-tac-toe.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+   <!--  Importing Rock Salt font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Rock+Salt&display=swap" rel="stylesheet">
+    
+</head>
+
+<body class="text-center mt-5 font-libre">
+    <!--choose a player menu -->
+<div class="selection box bg-teal-300">
+    <h1 class="text-3xl mb-3 uppercase">Tic Tac Toe</h1>
+    <div class="Question"> Choose the Icon you shall use</div>
+         <div class="option">
+     <button class="playerX">PLAYER X</button>
+     <button class="playerO">PLAYER O</button> </div>
+ </div> 
+ 
+ <!--GAMEBOARD-->
+ <div class="gameboard">
+   <div class="details">
+    <div class="players">
+        <span class="turn for X my-10">X's Turn</span>
+         <span class="turn for O my-10">O's Turn</span>
+         <div class="slider"></div>
+    </div>
+   </div>
+ </div>
+  
+ <!--PLAYBOARD/AREA-->
+ <div class="playboard bg-teal-300">
+    <section>
+        <!--a section represents a row-->
+        <!--a span represents a single box-->
+        <span class="box1"></span>
+        <span class="box2"></span>
+        <span class="box3"></span>
+    </section>
+    <section>
+        <!--a section represents a row-->
+        <!--a span represents a single box-->
+        <span class="box4"></span>
+        <span class="box5"></span>
+        <span class="box6"></span>
+    </section>
+    <section>
+        <!--a section represents a row-->
+        <!--a span represents a single box-->
+        <span class="box7"></span>
+        <span class="box8"></span>
+        <span class="box9"></span>
+    </section>
+ </div>
+ <!--GAMERESULT(shows which player has won)-->
+ <div class="resultbox">
+    <div class="result text"></div>
+    <div class="button">
+        <button class="border bg-teal-400 m-4 w-72 py-2 rounded-full font-extrabold text-lg text-white tracking-widest">REPLAY</button>
+        <button onclick="Window.location.href='Tic-tac-Toe.html'">GO HOME</button>
+    </div>
+ <footer class="bg-teal-300">&copy;By:The Tech Titans</footer>
+
+</body>
+</html> 
