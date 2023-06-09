@@ -64,10 +64,10 @@ function checkWinner(){
         const cellB = options[condition[1]];
         const cellC = options[condition[2]];
 
-        if(cellA == "" || cellB == "" || cellC == ""){
+        if(cellA === "" || cellB === "" || cellC === ""){
             continue;
         }
-        if(cellA == cellB && cellB == cellC){
+        if(cellA === cellB && cellB === cellC){
             roundWon = true;
             break;
         }
