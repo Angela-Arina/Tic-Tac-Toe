@@ -40,7 +40,7 @@ function cellClicked(element){
     element.classList.add("cursor-pointer");
     const cellIndex = element.getAttribute("cellindex");
 
-    if(options[cellIndex] = "" || !gameStart){
+    if(options[cellIndex] !== "" || !gameStart){
         return;
     }
 
