@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .title {
+        animation: color-animation 4s linear infinite;
+    }
+    .Tic {
+        --color-1: #DF8453;
+        --color-2: #3D8DAE;
+        --color-3: #E4A9A8;
+    }
+    .Tac {
+        --color-1: #DBAD4A;
+        --color-2: #ACCFCB;
+        --color-3: #17494D;
+    }
+    .Toe {
+        --color-1: #3D8DAE;
+        --color-2: #DF8453;
+        --color-3: #E4A9A8;
+    }
+}
+
+@keyframes color-animation {
+    0% {color: var (--color-1)}
+    32% {color: var (--color-1)}
+    38% {color: var (--color-2)}
+    65% {color: var (--color-2)}
+    78% {color: var (--color-3)}
+    90% {color: var (--color-3)}
+    100% {color: var (--color-1)}
+}
+
+button {
+    animation: pulse 3.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(.85);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 50px
+    rgba(#5a99d4, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow:0 0 0 0
+    rgba(#5a99d4, 0)
+    }
+}
