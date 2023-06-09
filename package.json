@@ -1,17 +1,7 @@
 {
-  "dependencies": {
-    "tailwind": "^4.0.0"
-  },
-  "name": "tic-tac-toe",
-  "version": "1.0.0",
-  "main": "tailwind.config.js",
-  "devDependencies": {},
-  "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/styles.css --watch",
+
     "prettier": "npx prettier --write **/*.html"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
-}
+<
