@@ -18,9 +18,9 @@
     
 </head>
 
-<body class="text-center mt-5 font-libre min-h-screen">
+<body class="text-center mt-5 font-libre box-content md:max-w-lg lg:bg-emerald-500 md:mx-auto dark:lg:bg-cyan-400">
     <!--choose a player menu -->
-<div class="selection-box bg-teal-300">
+<div class="selection-box bg-teal-300 dark:bg-emerald-500">
     <h1 class="text-3xl mb-3 uppercase">Tic Tac Toe</h1>
     <div class="Question"> Choose the Icon you shall use</div>
          <div class="option">
@@ -32,31 +32,31 @@
  <div class="gameboard">
    <div class="details">
     <div class="players">
-        <span class="turn for X my-10">X's Turn</span>
-         <span class="turn for O my-10">O's Turn</span>
+        <span class="turn for X">X's Turn</span>
+         <span class="turn for O">O's Turn</span>
          <div class="slider"></div>
     </div>
    </div>
  </div>
   
  <!--PLAYBOARD/AREA-->
- <div class="bg-teal-300 max-h-screen flex items-center justify-center">
+ <div class="bg-teal-300  flex items-center justify-center">
  <div class="playboard bg-teal-300 container items-center m-auto max-w-xl">
-    <section class=" grid grid-cols-3 border-slate-800  h-20 justify-self-center mt-10">
+    <section class=" grid grid-cols-3 border-slate-800  h-20 justify-self-center mt-10 px-10">
         <!--a section represents a row-->
         <!--a span represents a single box-->
         <span class="box1 border-r-4 border-b-4 border-inherit flex items-center justify-center "></span>
         <span class="box2 border-r-4 border-b-4 border-inherit flex items-center justify-center "></span>
         <span class="box3 border-b-4 border-inherit flex items-center justify-center"></span>
     </section>
-    <section class=" grid grid-cols-3 border-slate-800  h-20 justify-self-center">
+    <section class=" grid grid-cols-3 border-slate-800  h-20 justify-self-center px-10">
         <!--a section represents a row-->
         <!--a span represents a single box-->
         <span class="box4 border-inherit border-r-4 border-b-4 flex items-center justify-center "></span>
         <span class="box5 border-b-4 border-r-4 border-inherit flex items-center justify-center "></span>
         <span class="box6 border-b-4 border-inherit flex items-center justify-center"></span>
     </section>
-    <section class=" grid grid-cols-3 border-slate-800  h-20 justify-self-center mb-10">
+    <section class=" grid grid-cols-3 border-slate-800  h-20 justify-self-center mb-10 px-10">
         <!--a section represents a row-->
         <!--a span represents a single box-->
         <span class="box7 border-r-4 border-inherit flex items-center justify-center "></span>
@@ -69,10 +69,10 @@
  <div class="resultbox">
     <div class="result text"></div>
     <div class="button">
-        <button class="border bg-teal-400 m-4 w-72 py-2 rounded-full font-extrabold text-lg text-white tracking-widest">REPLAY</button>
-        <button onclick="Window.location.href='Tic-tac-Toe.html'" class="border bg-teal-400 m-4 w-72 py-2 rounded-full font-extrabold text-lg text-white tracking-widest">GO HOME</button>
+        <button class="border border-teal-400 bg-teal-400 dark:bg-emerald-500 dark:border-emerald-500 m-4 w-72 py-2 rounded-full font-extrabold text-lg text-white tracking-widest">REPLAY</button>
+        <button onclick="Window.location.href='Tic-tac-Toe.html'" class="border border-teal-400 bg-teal-400 dark:bg-emerald-500 dark:border-emerald-500 m-4 w-72 py-2 rounded-full font-extrabold text-lg text-white tracking-widest">GO HOME</button>
     </div>
- <footer class="bg-teal-300 sticky bottom-0 p-2">&copy;By:The Tech Titans</footer>
+ <footer class="bg-teal-300 dark:bg-cyan-400 sticky bottom-0 p-2">&copy;By:The Tech Titans</footer>
 
 </body>
 </html> 
