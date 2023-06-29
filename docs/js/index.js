@@ -1,29 +1,52 @@
-// OBTAINING REQUIRED ELEMENTS
-const playerXBtn = document.getElementById("player-x-button");
-const playerOBtn = document.getElementById("player-o-button");
+/*The js file is meant to show SUGGESTED arrangement of logic.It is divided into 4:
+        -The Button Component(Bewton) 
+        -The Grid Component(Frank)
+        -The Homepage Component(Dennis) 
+        -The Overall Game Logic(Ronnie)
+    NB:Please note that you can add or omit any logic you feel free to.This is just a suggested rollout of duties.
+    The main aim is forYOUR BRANCH TO SHOW YOU HAVE CONTRIBUTED A LOGIC
+
+    The bulk of the logic is handled by the one responsible for the overall game logic
+
+    Good luck to us all,remember that the merges happen one after the other and each one of us should have an app.jsx file to house our logic.Please note that we all have to create our own branches before merging to main branch
+*/
+
+
+// BUTTON COMPONENT RELATED JS
+    // OBTAINING REQUIRED ELEMENTS
 const gameStartBtn = document.getElementById("play-game-button");
-const showPlayer = document.getElementById("show-player");
 const resetBtn = document.getElementById("reset-button");
+    // SETTING IN-GAME VARIABLES
+let gameStart = false;
+    // FUNCTION WHEN START BUTTON IS CLICKED
+gameStartBtn.addEventListener("click", () =>{
+    gameStart = true;
+    }
+)
+    // FUNCTION WHEN REXET BUTTON IS CLICKED
+resetBtn.addEventListener("click", () =>{
+    gameStart = false;
+})
+
+// GRID COMPONENT RELATED JS
+    // OBTAINING REQUIRED ELEMENTS
 const gameCells = document.querySelectorAll("#cell");
 const gameContainer = document.querySelector(".game-container");
+    // FUNCTION WHEN A CELL IS UPDATED
+function updateCell(cell, index){
+    options[index] = chosenPlayer;
+    cell.textContent = chosenPlayer;
+}
+
+// HOMEPAGE COMPONENT RELATED JS
+    // OBTAINING REQUIRED ELEMENTS
+const showPlayer = document.getElementById("show-player");
 const selectionBox = document.querySelector(".selection-box");
-
-// SETTING IN-GAME VARIABLES
-const winningConditions = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-];
-let gameStart = false;
+const playerXBtn = document.getElementById("player-x-button");
+const playerOBtn = document.getElementById("player-o-button");
+    // SETTING IN GAME VARIABLES
 let chosenPlayer;
-let options = ["","","","","","","","",""];
-
-// FUNCTION TO ALTERNATE PLAYER
+    // FUNCTION TO ALTERNATE PLAYER
 function changePlayer(){
     if (chosenPlayer === "O"){
         chosenPlayer = "X"
@@ -34,8 +57,32 @@ function changePlayer(){
     showPlayer.innerText = `${chosenPlayer} turn`;
     showPlayer.classList.remove("hidden")
 }
+    // FUNCTION IF EITHER PLAYER BUTTON IS CLICKED
+    playerOBtn.addEventListener("dblclick", () =>{
+        chosenPlayer = "O";
+        showPlayer.innerText = `YOU ARE PLAYER ${chosenPlayer}`;
+        showPlayer.classList.remove("hidden")
+    })
+    playerXBtn.addEventListener("dblclick", () =>{
+        chosenPlayer = "X";
+        showPlayer.innerText = `YOU ARE PLAYER ${chosenPlayer}`;
+        showPlayer.classList.remove("hidden")
+    })
 
-// FUNCTION WHEN A CELL IS CLICKED
+// GAME LOGIC RELATED JS
+    // SETTING IN-GAME VARIABLES
+const winningConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+let options = ["","","","","","","","",""];
+    // FUNCTION WHEN A CELL IS CLICKED
 function cellClicked(element){
     element.classList.add("cursor-pointer");
     const cellIndex = element.getAttribute("cellindex");
@@ -47,14 +94,7 @@ function cellClicked(element){
     updateCell(element, cellIndex);
     checkWinner()
 }
-
-// FUNCTION WHEN A CELL IS UPDATED
-function updateCell(cell, index){
-    options[index] = chosenPlayer;
-    cell.textContent = chosenPlayer;
-}
-
-// FUNCTION TO CHECK WINNER
+    // FUNCTION TO CHECK WINNER
 function checkWinner(){
     let roundWon = false;
 
@@ -87,42 +127,3 @@ function checkWinner(){
         changePlayer();
     }    
 }
-
-// FUNCTION IF EITHER PLAYER BUTTON IS CLICKED
-playerOBtn.addEventListener("dblclick", () =>{
-    chosenPlayer = "O";
-    showPlayer.innerText = `YOU ARE PLAYER ${chosenPlayer}`;
-    showPlayer.classList.remove("hidden")
-})
-
-playerXBtn.addEventListener("dblclick", () =>{
-    chosenPlayer = "X";
-    showPlayer.innerText = `YOU ARE PLAYER ${chosenPlayer}`;
-    showPlayer.classList.remove("hidden")
-})
-
-// FUNCTION WHEN START BUTTON IS CLICKED
-gameStartBtn.addEventListener("click", () =>{
-    gameStart = true;
-    showPlayer.classList.add("hidden");
-    gameContainer.classList.remove("hidden");
-    gameContainer.classList.add("flex");
-    selectionBox.classList.add("hidden");
-    for (let cell of gameCells){
-        cell.addEventListener("click", () => cellClicked(cell))
-    }
-})
-
-// FUNCTION WHEN REXET BUTTON IS CLICKED
-resetBtn.addEventListener("click", () =>{
-    gameStart = false;
-    options = ["","","","","","","","",""];
-    chosenPlayer;
-    showPlayer.classList.add("hidden");
-    gameContainer.classList.add("hidden");
-    gameContainer.classList.remove("flex");
-    selectionBox.classList.remove("hidden");
-    for (let cell of gameCells){
-        cell.innerText = ''
-    }
-})
